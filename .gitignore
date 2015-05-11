@@ -5,3 +5,8 @@
 /output/logs/
 /output/nohups/
 /output/reports/
+
+# Intellij
+.idea/
+*.iml
+*.iws
