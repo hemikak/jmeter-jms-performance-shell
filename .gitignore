@@ -1,0 +1,7 @@
+# Mac
+.DS_Store
+
+# Proj
+/output/logs/
+/output/nohups/
+/output/reports/
