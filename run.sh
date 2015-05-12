@@ -75,22 +75,22 @@ function main () {
 }
 
 setPaths
-#
-#clearOutputFolder
-#
-#main 1KB/1Thread
-#main 1KB/2Thread
-#main 1KB/5Thread
-#main 1KB/10Thread
-#
-#main 5KB/1Thread
-#main 5KB/2Thread
-#main 5KB/5Thread
-#main 5KB/10Thread
-#
-#main 1KB/1Thread
-#main 5KB/2Thread
-#main 5KB/5Thread
-#main 5KB/10Thread
+
+clearOutputFolder
+
+main 1KB/1Thread
+main 1KB/2Thread
+main 1KB/5Thread
+main 1KB/10Thread
+
+main 5KB/1Thread
+main 5KB/2Thread
+main 5KB/5Thread
+main 5KB/10Thread
+
+main 1KB/1Thread
+main 5KB/2Thread
+main 5KB/5Thread
+main 5KB/10Thread
 
 exit
