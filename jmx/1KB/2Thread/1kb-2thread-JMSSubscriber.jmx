@@ -29,7 +29,7 @@
         <SubscriberSampler guiclass="JMSSubscriberGui" testclass="SubscriberSampler" testname="JMS Subscriber" enabled="true">
           <stringProp name="jms.jndi_properties">false</stringProp>
           <stringProp name="jms.initial_context_factory">org.wso2.andes.jndi.PropertiesFileInitialContextFactory</stringProp>
-          <stringProp name="jms.provider_url">/Users/hemikakodikara/mb/workspace/jmeter-jms-performance-shell/jndi.properties</stringProp>
+          <stringProp name="jms.provider_url">%%ProjPath%%/jndi.properties</stringProp>
           <stringProp name="jms.connection_factory">QueueConnectionFactory</stringProp>
           <stringProp name="jms.topic">QueueOneKB</stringProp>
           <stringProp name="jms.security_principle">admin</stringProp>

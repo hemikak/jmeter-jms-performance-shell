@@ -33,13 +33,13 @@
         <PublisherSampler guiclass="JMSPublisherGui" testclass="PublisherSampler" testname="JMSPublisher" enabled="true">
           <stringProp name="jms.jndi_properties">false</stringProp>
           <stringProp name="jms.initial_context_factory">org.wso2.andes.jndi.PropertiesFileInitialContextFactory</stringProp>
-          <stringProp name="jms.provider_url">/Users/hemikakodikara/mb/workspace/jmeter-jms-performance-shell/jndi.properties</stringProp>
+          <stringProp name="jms.provider_url">%%ProjPath%%/jndi.properties</stringProp>
           <stringProp name="jms.connection_factory">QueueConnectionFactory</stringProp>
           <stringProp name="jms.topic">QueueOneKB</stringProp>
           <stringProp name="jms.security_principle"></stringProp>
           <stringProp name="jms.security_credentials"></stringProp>
           <stringProp name="jms.text_message"></stringProp>
-          <stringProp name="jms.input_file">/Users/hemikakodikara/mb/workspace/mb-performance/src/test/resources/sampleMessages/sample_1KB_msg.xml</stringProp>
+          <stringProp name="jms.input_file">%%ProjPath%%/sampleMessages/sample_1KB_msg.xml</stringProp>
           <stringProp name="jms.random_path"></stringProp>
           <stringProp name="jms.config_choice">jms_use_file</stringProp>
           <stringProp name="jms.config_msg_type">jms_text_message</stringProp>

@@ -3,13 +3,11 @@
 # Update folder structure
 
 JMETER_PATH="/Users/hemikakodikara/mb/clients/mb-jmeter/bin"
+PROJECT_PATH="\/Users\/hemikakodikara\/mb\/workspace\/jmeter-jms-performance-shell"
 
 function setPaths () {
-    OLD_PATH="/Users/hemikakodikara/mb/workspace/mb-performance/src/test/resources"
-    NEW_PATH="/Users/hemikakodikara/mb/workspace/jmeter-jms-performance-shell"
-    xmlstarlet edit -L -u "/jmeterTestPlan/hashTree/hashTree/ThreadGroup/stringProp[@name='ThreadGroup.num_threads']" -v '1'
-    find ./jmx/ -name '*.jmx' -exec sed -i 's/tttttttt/oooooooo/g' "{}" \;
-#    find ./jmx/1KB/1Thread/ -name '*.jmx' -exec sed -i 's/$OLD_PATH/$NEW_PATH/g' "{}" \;
+    local OLD_PATH="%%ProjPath%%"
+    find ./jmx/ -name '*.jmx' -exec sed -i '' "s/$OLD_PATH/$PROJECT_PATH/g" "{}" \;
 }
 
 function clearOutputFolder () {
