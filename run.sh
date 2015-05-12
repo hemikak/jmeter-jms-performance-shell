@@ -51,18 +51,18 @@ function main () {
     local PUB_FILENAME="${PUBLISHER_PATH##*/}"
     local PUB_FILENAME="${PUB_FILENAME%.*}"
 
-    nohup "$JMETER_PATH/jmeter.sh" -n -t ${SUBSCRIBER_PATH} -l "./output/reports/${SUB_FILENAME}.jtl" -j "./output/logs/${SUB_FILENAME}.log" > "./output/nohups/${SUB_FILENAME}.out" &
+    nohup "$JMETER_PATH/jmeter.sh" -n -t ${SUBSCRIBER_PATH} -l "./output/reports/${SUB_FILENAME}.csv" -j "./output/logs/${SUB_FILENAME}.log" > "./output/nohups/${SUB_FILENAME}.out" &
 
     echo "Waiting for subscriber to subscribe..."
 
     sleep 5
 
-    nohup "$JMETER_PATH/jmeter.sh" -n -t ${PUBLISHER_PATH} -l "./output/reports/${PUB_FILENAME}.jtl" -j "./output/logs/${PUB_FILENAME}.log" > "./output/nohups/${PUB_FILENAME}.out" &
+    nohup "$JMETER_PATH/jmeter.sh" -n -t ${PUBLISHER_PATH} -l "./output/reports/${PUB_FILENAME}.csv" -j "./output/logs/${PUB_FILENAME}.log" > "./output/nohups/${PUB_FILENAME}.out" &
 
-    waitTillFileSizeChange "./output/reports/${PUB_FILENAME}.jtl"
+    waitTillFileSizeChange "./output/reports/${PUB_FILENAME}.csv"
     echo "Publisher finished."
 
-    waitTillFileSizeChange "./output/reports/${SUB_FILENAME}.jtl"
+    waitTillFileSizeChange "./output/reports/${SUB_FILENAME}.csv"
     echo "Subscriber finished."
 
     ${JMETER_PATH}/shutdown.sh
