@@ -35,7 +35,7 @@
           <stringProp name="jms.initial_context_factory">org.wso2.andes.jndi.PropertiesFileInitialContextFactory</stringProp>
           <stringProp name="jms.provider_url">%%ProjPath%%/jndi.properties</stringProp>
           <stringProp name="jms.connection_factory">QueueConnectionFactory</stringProp>
-          <stringProp name="jms.topic">QueueOneKB</stringProp>
+          <stringProp name="jms.topic">QueueTenKB</stringProp>
           <stringProp name="jms.security_principle"></stringProp>
           <stringProp name="jms.security_credentials"></stringProp>
           <stringProp name="jms.text_message"></stringProp>
