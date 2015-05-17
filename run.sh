@@ -22,7 +22,7 @@ function waitTillFileSizeChange () {
     while [[ ${OLD_SIZE} != ${NEW_SIZE} ]]
     do
         echo "Waiting..."
-        sleep 5
+        sleep 10
         OLD_SIZE=${NEW_SIZE}
         NEW_SIZE=$(stat -f %z $1)
         echo $1, SIZE : ${NEW_SIZE}
@@ -88,9 +88,9 @@ main 5KB/2Thread
 main 5KB/5Thread
 main 5KB/10Thread
 
-main 1KB/1Thread
-main 5KB/2Thread
-main 5KB/5Thread
-main 5KB/10Thread
+main 10KB/1Thread
+main 10KB/2Thread
+main 10KB/5Thread
+main 10KB/10Thread
 
 exit
