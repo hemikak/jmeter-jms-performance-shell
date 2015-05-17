@@ -93,4 +93,6 @@ main 10KB/2Thread
 main 10KB/5Thread
 main 10KB/10Thread
 
+kill -9 $(ps -ef | grep jmeter | grep -v 'grep' | awk '{print $2}')
+
 exit
